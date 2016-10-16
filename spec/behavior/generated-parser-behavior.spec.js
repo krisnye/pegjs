@@ -966,6 +966,14 @@ describe("generated parser behavior", function() {
     });
 
     describe("sequence", function() {
+      describe("when extract expression", function() {
+        it("returns the extract expression", function() {
+          let parser = peg.generate("start = 'a' @'b' 'c'", options);
+
+          expect(parser).toParse("abc", "b");
+        });
+      });
+
       describe("when all expressions match", function() {
         it("returns an array of their match results", function() {
           let parser = peg.generate("start = 'a' 'b' 'c'", options);

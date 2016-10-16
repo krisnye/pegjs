@@ -41,6 +41,7 @@
   "bin": "bin/pegjs",
   "repository": "pegjs/pegjs",
   "scripts": {
+    "build": "gulp parser",
     "test": "gulp"
   },
   "devDependencies": {
